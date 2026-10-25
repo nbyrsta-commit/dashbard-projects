@@ -19,13 +19,14 @@ body {
   }
 
   /* 2. سایدبار تمام عرض صفحه میشه */
-  .sidebar {
-    width: 100% !important;
-    height: auto !important;
-    border-left: none !important;
-    border-bottom: 1px solid #eee !important;
-    padding: 1rem !important;
-  }
+ .sidebar {
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important; /* 👈 این خط جدید */
+  border-left: none !important;
+  border-bottom: 1px solid #eee !important;
+  padding: 1rem !important;
+}
 
   /* 3. منوهای سایدبار افقی میشن تا جا بگیرن */
   .nav-list {
@@ -48,11 +49,12 @@ body {
 
   /* 5. بخش اصلی محتوا تمام عرض بشه */
   .main-content {
-    width: 100% !important;
-    padding: 1rem !important;
-    margin: 0 !important;
-    overflow-x: hidden !important; /* جلوگیری از بیرون زدگی */
-  }
+  width: 100% !important;
+  padding: 1rem !important;
+  margin: 0 !important;
+  margin-top: 0 !important; /* 👈 این خط جدید */
+  overflow-x: hidden !important;
+}
 
   /* 6. کارت‌های آماری و نمودارها زیر هم قرار بگیرن */
   .stats-grid,
