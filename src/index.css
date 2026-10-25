@@ -10,3 +10,62 @@ body {
 #root {
   min-height: 100vh;
 }
+/* تنظیمات مخصوص گوشی و تبلت */
+@media (max-width: 768px) {
+  /* 1. کل صفحه عمودی میشه (سایدبار میره بالا) */
+  .app-shell {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* 2. سایدبار تمام عرض صفحه میشه */
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    border-left: none !important;
+    border-bottom: 1px solid #eee !important;
+    padding: 1rem !important;
+  }
+
+  /* 3. منوهای سایدبار افقی میشن تا جا بگیرن */
+  .nav-list {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important; /* اجازه اسکرول افقی فقط برای منو */
+    gap: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .nav-item {
+    white-space: nowrap !important; /* متن منوها نشکنه */
+  }
+
+  /* 4. کارت راهنما و پروفایل رو تو گوشی مخفی میکنیم تا شلوغ نباشه */
+  .help-card,
+  .sidebar-bottom {
+    display: none !important;
+  }
+
+  /* 5. بخش اصلی محتوا تمام عرض بشه */
+  .main-content {
+    width: 100% !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    overflow-x: hidden !important; /* جلوگیری از بیرون زدگی */
+  }
+
+  /* 6. کارت‌های آماری و نمودارها زیر هم قرار بگیرن */
+  .stats-grid,
+  .content-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* فقط 1 ستون */
+    gap: 1rem !important;
+  }
+
+  /* 7. هدر بالای صفحه مرتب بشه */
+  .topbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+}
