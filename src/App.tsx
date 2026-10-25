@@ -95,8 +95,8 @@ function App() {
   }
 
   return (
-    <div className="app-shell" dir="rtl">
-      <aside className="sidebar">
+    <div className="app-shell flex flex-col md:flex-row min-h-screen" dir="rtl">
+      <aside className="sidebar w-full md:w-64 border-b md:border-b-0 md:border-l border-gray-200 p-4 shrink-0">
         <a className="brand" href="#home">
           <span className="brand-icon">n.</span>
           <span>
@@ -142,7 +142,7 @@ function App() {
         </div>
       </aside>
 
-      <main className="main-content" id="home">
+<main className="main-content flex-1 p-4 w-full overflow-hidden" id="home">
         <header className="topbar">
           <div className="breadcrumb">
             <span>فروشگاه</span>
